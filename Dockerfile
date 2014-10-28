@@ -1,7 +1,8 @@
 FROM base/archlinux:latest
 MAINTAINER Nathan Hourt<nathan@bitshares.org>
 
-ENTRYPOINT bitsharesx-cli
+ADD bitshares_loop /
+ENTRYPOINT /bitshares_loop
 
 WORKDIR /tmp
 ADD bootstrap /tmp/
