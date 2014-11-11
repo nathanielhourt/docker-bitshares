@@ -6,7 +6,7 @@ ENTRYPOINT /bitshares_loop
 
 WORKDIR /tmp
 ADD bootstrap /tmp/
-ADD bitsharesx-cli.src.tar.xz /tmp/
+ADD bitshares-cli.src.tar.xz /tmp/
 
 RUN ./bootstrap
-RUN bitsharesx-cli
+RUN bitshares-cli

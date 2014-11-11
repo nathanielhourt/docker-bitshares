@@ -4,11 +4,11 @@
 pacman -Syu --noconfirm --needed curl openssl binutils boost zlib git cmake clang ninja
 
 # Install bitsharesx
-cd bitsharesx-cli
+cd bitshares-cli
 makepkg --asroot # I wrote this PKGBUILD, so I trust it to build as root. :P
-pacman -U --noconfirm bitsharesx-cli*.pkg.tar.xz
+pacman -U --noconfirm bitshares-cli*.pkg.tar.xz
 
 # Preload the blockchain
-mkdir -p /.BitSharesX/chain
-cd /.BitSharesX/chain
+mkdir -p /.BitShares/chain
+cd /.BitShares/chain
 curl https://nathanhourt.com/raw_chain.tar.xz | tar xJ
