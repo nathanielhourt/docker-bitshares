@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Update system, install dependencies
-pacman -Syu --noconfirm --needed curl openssl binutils boost zlib git cmake clang ninja
+pacman -Syu --noconfirm --needed curl openssl binutils boost zlib git cmake clang ninja sudo fakeroot
 
 # Install bitsharesx
+chmod 777 -R bitshares-cli
 cd bitshares-cli
-makepkg --asroot # I wrote this PKGBUILD, so I trust it to build as root. :P
+sudo -u nobody makepkg
 pacman -U --noconfirm bitshares-cli*.pkg.tar.xz
 
 # Preload the blockchain
