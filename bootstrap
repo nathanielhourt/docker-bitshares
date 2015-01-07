@@ -10,6 +10,6 @@ sudo -u nobody makepkg
 pacman -U --noconfirm bitshares-cli*.pkg.tar.xz
 
 # Preload the blockchain
-mkdir -p /.BitShares/chain
-cd /.BitShares/chain
+mkdir -p /root/.BitShares/chain
+cd /root/.BitShares/chain
 curl https://nathanhourt.com/raw_chain.tar.xz | tar xJ
