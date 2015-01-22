@@ -1,4 +1,4 @@
-FROM l3iggs/archlinux:latest
+FROM l3iggs/archlinux:master
 MAINTAINER Nathan Hourt<nathan@bitshares.org>
 
 ADD bitshares_loop /
